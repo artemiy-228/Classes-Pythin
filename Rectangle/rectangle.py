@@ -11,7 +11,28 @@ class Rectangle:
         return self.width * self.length
 
     def display(self):
-        print(f"Length of rectangle is {self.length}")
-        print(f"Width of rectangle is {self.width}")
-        print(f"Perimeter of rectangle is {self.perimetеr()}")
-        print(f"Area of rectangle is {self.area_v}")
+        print(f"Length is {self.length} units")
+        print(f"Width is {self.width} units")
+        print(f"Perimeter is {self.perimetеr()} units")
+        print(f"Area is {self.area_v} units")
+
+class Parallelepipede(Rectangle):
+
+    def __init__(self, length=3, width=4, height=5):
+        Rectangle.__init__(self, length, width)
+        self.height = height
+
+    def volume(self):
+        return Rectangle.area(self) * self.height
+
+    def display(self):
+        Rectangle.display(self)
+        print(f"Volume is {self.volume()} units")
+
+
+print("Rectangle: ")
+Rect = Rectangle(5, 6)
+Rect.display()
+print("Parallelepipede: ")
+Parall = Parallelepipede(6, 8, 7)
+Parall.display()
