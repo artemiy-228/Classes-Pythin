@@ -20,3 +20,8 @@ class Student(Person):
     def display_student(self):
         Person.display(self)
         print(f"{self.name} has {self.major} major")
+
+
+Artem = Student(name="Artem", age=18, major="Programming")
+
+Artem.display_student()
