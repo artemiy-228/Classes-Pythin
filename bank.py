@@ -17,4 +17,7 @@ class BankAccount:
     def bank_fees(self):
         self.balance *= 0.95
 
-        
+    def display(self):
+        print(f"Account id is {self.account_number}")
+        print(f"Owners name is {self.name}")
+        print(f"Account balance is {self.balance}")
