@@ -9,9 +9,14 @@ class Person:
         print(f"Student {self.name} is {self.age} years old")
 
 
+
 class Student(Person):
 
     def __init__(self, name="Student", age=18, major="Math"):
         Person.__init__(self, name, age)
         self.major = major
 
+
+    def display_student(self):
+        Person.display(self)
+        print(f"{self.name} has {self.major} major")
