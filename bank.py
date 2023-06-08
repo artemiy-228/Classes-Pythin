@@ -14,3 +14,7 @@ class BankAccount:
         else:
             print("not enough balance")
 
+    def bank_fees(self):
+        self.balance *= 0.95
+
+        
