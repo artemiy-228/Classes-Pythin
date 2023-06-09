@@ -8,4 +8,10 @@ class Computation:
             f *= i
         return f
 
-    
+    def sum(self, num):
+        return int(num * (num + 1) / 2)
+
+
+Calculator = Computation()
+print(Calculator.factorial(5))
+print(Calculator.sum(5))
