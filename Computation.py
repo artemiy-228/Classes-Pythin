@@ -40,12 +40,27 @@ class Computation:
         for i in range(11):
             yield [i * j for j in range(1, 11)]
 
+    def list_div(self, n):
+        lDiv = [i for i in range(1, n + 1) if n % i == 0]
+        return lDiv
+
+    def list_div_prime(self, n):
+        lDivPrime = [i for i in range(1, n + 1) if n % i == 0 and Computation.test_prime(self, i) == 1]
+        return lDivPrime
 
 Calculator = Computation()
+
 print(Calculator.factorial(5))
+
 print(Calculator.sum(5))
+
 print(Calculator.test_prime(111))
+
 print(Calculator.test_prims(121, 11))
+
 print(Calculator.table_mult(5))
 print(list(Calculator.all_table_mult()))
+
+print(Calculator.list_div(100))
+print(Calculator.list_div_prime(100))
 
