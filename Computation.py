@@ -33,9 +33,19 @@ class Computation:
             return True
         return False
 
+    def table_mult(self, x):
+        return [i * x for i in range(1, 11)]
+
+    def all_table_mult(self):
+        for i in range(11):
+            yield [i * j for j in range(1, 11)]
+
 
 Calculator = Computation()
 print(Calculator.factorial(5))
 print(Calculator.sum(5))
 print(Calculator.test_prime(111))
 print(Calculator.test_prims(121, 11))
+print(Calculator.table_mult(5))
+print(list(Calculator.all_table_mult()))
+
